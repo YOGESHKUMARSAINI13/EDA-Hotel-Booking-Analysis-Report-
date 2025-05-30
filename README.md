@@ -1,66 +1,64 @@
-# EDA-Hotel-Booking-Analysis-Report-
-Exploratory Data Analysis (EDA) Project
-
-Tools Used: Python (Google Colab) Libraries: Pandas, NumPy, Matplotlib, Seaborn
 
 Industry Context:
-
-The hospitality industry is highly dynamic, where customer behavior and booking trends significantly impact revenue and operational strategies. This project aims to analyze hotel booking data to uncover actionable insights for improving customer experience, optimizing operations, and increasing profitability.
+The hospitality industry, particularly hotels, heavily relies on bookings for revenue generation. However, booking cancellations present a major challenge, leading to lost revenue and operational inefficiencies. With the rise of online travel agencies and increasing customer expectations, it has become essential for hotels to understand customer behavior, booking patterns, and factors influencing cancellations. Data-driven strategies allow hotels to optimize occupancy, personalize services, and minimize losses due to cancellations.
 
 Project Objective:
+The objective of this Exploratory Data Analysis (EDA) project is to uncover hidden patterns and insights from hotel booking data for both city and resort hotels. Specifically, the project focuses on:
 
-To conduct a detailed exploratory data analysis of hotel booking data to identify key patterns, trends, and anomalies that can drive data-driven decision-making for improved booking management and customer satisfaction.
+Understanding the reasons behind booking cancellations.
 
-About the Data:
+Identifying trends in booking behavior such as peak months, length of stay, lead time, and special requests.
 
-The dataset consists of hotel booking information, including reservation details, customer demographics, booking lead time, average daily rate (ADR), deposit type, and reservation status.
-Key attributes include hotel type, lead time, arrival date, meal type, and ADR.
+Proposing data-driven recommendations to reduce cancellations and improve direct bookings.
+
+Enabling hotels to improve operational planning and revenue management through actionable insights.
+
 Data Preprocessing Steps:
+The data preprocessing phase was crucial for ensuring analysis quality and included the following steps:
 
-Handling Missing Values:
-    Dropped columns with less than 5% null values and imputed others using mean, median, or mode, ensuring no significant data loss.
+Initial Exploration: Understanding the structure of the dataset, types of variables, and overall statistics.
 
+Handling Missing Values: Cleaning null entries in fields like children, country, and agent.
 
-Sorting and Removing Duplicates:
-    Sorted data by key attributes and removed duplicate records to maintain data integrity and avoid skewed analysis.
+Removing Irrelevant Columns: Dropping columns that did not add significant value to analysis.
 
+Data Type Conversions: Converting object types to appropriate formats like datetime for easier analysis.
 
-Renaming and Creating New Columns:
-    Renamed columns for better readability and created calculated fields such as half lead time to provide additional insights for business needs.
+Outlier Treatment: Investigating and managing unusual values in features such as number of children or guests.
 
+Feature Engineering: Creating new features (e.g., total guests) and combining related columns for better visualization.
 
-Data Cleaning and Transformation:
-    Dropped irrelevant columns, aggregated data (e.g., average lead time, max/min ADR), and standardized categorical data using .replace() and .apply() functions for consistency.
-    Grouped data by hotel type and reservation status, applying aggregation functions to derive insights such as average lead time and reservation patterns.
 Actionable Insights:
+High Cancellation Rates: Over 37% of bookings were canceled, with city hotels having higher cancellation rates compared to resort hotels.
 
-High Lead Time Patterns:
-    Customers with longer lead times were more likely to cancel reservations, indicating the need for flexible booking policies or targeted retention strategies.
+Lead Time Influence: Longer lead times (advance bookings) correlated with higher cancellation rates.
 
+Seasonality in Demand: Bookings peaked during the summer months, especially from May to August.
 
-Revenue Contribution by Hotel Type:
-    Resort hotels exhibited higher ADR compared to city hotels, suggesting opportunities to market premium packages to drive revenue.
+Repeat Guests Are Loyal: Repeat guests were less likely to cancel and made more special requests.
 
+Direct Bookings Are More Reliable: Bookings made directly with hotels had lower cancellation rates than those through third-party agents.
 
+Family Guests Stay Longer: Bookings involving children or babies had longer stays but also had slightly higher cancellation rates.
 
-
-Seasonality in Bookings:
-    Peak booking seasons showed higher cancellations, highlighting the importance of overbooking strategies and efficient resource allocation.
-
-
-Impact of Deposit Type:
-    Customers choosing "No Deposit" were more likely to cancel their bookings, emphasizing the need to encourage prepayment options.
-
-
-Customer Segmentation Insights:
-    Families tended to book longer stays compared to solo travelers, providing scope for targeted promotional packages for specific customer segments.
 Key Results:
+City hotels experienced significantly more cancellations (~42%) than resort hotels (~27%).
 
-Reduced data anomalies by systematically handling missing values and duplicates, resulting in a clean and comprehensive dataset.
-Derived patterns showing seasonality, lead time behavior, and ADR trends, supporting pricing and operational strategies.
-Delivered interactive visualizations like heatmaps, scatter plots, bar charts, and pair plots to communicate insights effectively.
+Bookings with zero special requests or made via online travel agents were more prone to cancellation.
+
+The majority of bookings were for short stays (1-3 days), but longer stays showed a slight increase in cancellations.
+
+Guests from certain countries (e.g., Portugal, UK, France) showed varying booking and cancellation patterns, useful for geo-targeted strategies.
+
 Business Impact:
+The analysis empowers hotel businesses to:
 
-Improved decision-making for pricing strategies based on ADR trends and lead times.
-Enhanced operational efficiency by identifying peak booking times and resource allocation needs.
-Increased customer satisfaction through targeted retention strategies and personalized offers.
+Optimize Cancellation Policy: Adjust policies based on lead time or booking channel to reduce losses.
+
+Target Repeat Guests: Offer loyalty incentives to guests with a history of non-cancellation.
+
+Seasonal Strategy Planning: Better prepare for high-demand seasons through staff and inventory optimization.
+
+Marketing Focus: Promote direct bookings through offers like free breakfast or parking to reduce reliance on third-party channels.
+
+Customer Segmentation: Tailor services based on demographic and booking behavior to improve satisfaction and retention.
